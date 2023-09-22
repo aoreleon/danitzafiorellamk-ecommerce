@@ -3,6 +3,7 @@
 
 :root {
     --text-color-var: #873E91;
+    --product-color-text: #5f046b;
 }
 .hero-section {
     width: 100%;
@@ -39,13 +40,17 @@
 
 /* Productos */
 .product {
-    max-width: 68.75rem;
-    margin: auto;
-    text-align: center;
-    margin-top: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+    border-top: 2px solid var(--btn-color);
 }
 
 .product-category {
-    margin-bottom: 1rem;
-
+    padding: 0 10vw;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+    color: var(--product-color-text);
 }
