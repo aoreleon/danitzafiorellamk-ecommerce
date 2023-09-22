@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 899.24 612.36">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 337px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #e0037f;
+        font-family: FrenchScriptMT, 'French Script MT';
+      }
+
+      .cls-3 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-2 {
+        font-size: 278.87px;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(0 277.85)"><tspan x="0" y="0">Danitza</tspan></text>
+  <text class="cls-2" transform="translate(267.1 527.26)"><tspan class="cls-3" x="0" y="0">F</tspan><tspan x="146.92" y="0">iorella</tspan></text>
+</svg>

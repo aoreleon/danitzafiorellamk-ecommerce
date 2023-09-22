@@ -1,0 +1,51 @@
+@import 'nav.css';
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@1,300&display=swap');
+
+:root {
+    --text-color-var: #873E91;
+}
+.hero-section {
+    width: 100%;
+    height: calc(65vh - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.hero-section .content {
+    width: 45rem;
+    padding: 0.625rem;
+    border-radius: 6px;
+    box-shadow: 0px 2px 15px 2px var(--text-color-var); 
+}
+.hero-section .background {    
+    height: 200px;      
+    width: 400px;
+}
+
+.hero-section .logo {
+    height: 200px;    
+    margin: auto;
+}
+
+.hero-section .sub-heading {
+    margin-top: 10px;
+    text-align: center;
+    color: var(--text-color-var);    
+    font-size: 50px;
+    font-weight: 300;
+    font-family: 'Great Vibes', cursive;    
+}
+
+/* Productos */
+.product {
+    max-width: 68.75rem;
+    margin: auto;
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.product-category {
+    margin-bottom: 1rem;
+
+}
