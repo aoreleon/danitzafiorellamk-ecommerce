@@ -1,56 +1,203 @@
-@import 'nav.css';
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@1,300&display=swap');
+@import "nav.css";
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@1,300&display=swap");
+
 
 :root {
-    --text-color-var: #873E91;
-    --product-color-text: #5f046b;
+  --text-color-var: #873e91;
+  --product-color-text: #5f046b;
+  --discount-tag-color: #ff7d7d;
 }
 .hero-section {
-    width: 100%;
-    height: calc(65vh - 120px);
-    display: flex;
-    justify-content: center;
-    align-items: center;    
+  width: 100%;
+  height: calc(65vh - 120px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-section .content {
-    width: 45rem;
-    padding: 0.625rem;
-    border-radius: 6px;
-    box-shadow: 0px 2px 15px 2px var(--text-color-var); 
+  width: 45rem;
+  padding: 0.625rem;
+  border-radius: 6px;
+  box-shadow: 0px 2px 15px 2px var(--text-color-var);
 }
-.hero-section .background {    
-    height: 200px;      
-    width: 400px;
+.hero-section .background {
+  height: 200px;
+  width: 400px;
 }
 
 .hero-section .logo {
-    height: 200px;    
-    margin: auto;
+  height: 200px;
+  margin: auto;
 }
 
 .hero-section .sub-heading {
-    margin-top: 10px;
-    text-align: center;
-    color: var(--text-color-var);    
-    font-size: 50px;
-    font-weight: 300;
-    font-family: 'Great Vibes', cursive;    
+  margin-top: 10px;
+  text-align: center;
+  color: var(--text-color-var);
+  font-size: 50px;
+  font-weight: 300;
+  font-family: "Great Vibes", cursive;
 }
 
 /* Productos */
 .product {
-    position: relative;
-    overflow: hidden;
-    padding: 20px 0;
-    border-top: 2px solid var(--btn-color);
+  position: relative;
+  overflow: hidden;
+  padding: 20px 0;
+  border-top: 2px solid var(--btn-color);
 }
 
 .product-category {
-    padding: 0 10vw;
-    font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 40px;
-    text-transform: capitalize;
-    color: var(--product-color-text);
+  padding: 0 10vw;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+  color: var(--product-color-text);
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+/* Products Container */
+.product-container {
+  padding: 0 8vw;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.product-container::-webkit-scrollbar {
+  display: none;
+}
+
+.product-card {
+  flex: 0 0 auto;
+  width: 250px;
+  height: 450px;
+  margin-right: 40px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 10px 1px var(--text-color-var);
+}
+
+.product-image {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.product-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.discount-tag {
+  position: absolute;
+  background: var(--discount-tag-color);
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+  right: 10px;
+  top: 10px;
+  text-transform: capitalize;
+}
+
+.card-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  width: 90%;
+  border: none;
+  outline: none;
+  background: var(--discount-tag-color);
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+  opacity: 0.4;
+  color: #fff;
+}
+
+.product-card:hover .card-btn {
+  opacity: 1;
+}
+.card-btn:hover {
+  background-color: var(--product-color-text);
+}
+
+.product-brand {
+  text-transform: uppercase;
+  color: var(--product-color-text);
+}
+
+.product-short-des {
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  opacity: 0.6;
+  margin: 5px 0;
+}
+
+.price {
+  font-weight: 900;
+  font-size: 20px;
+  color: var(--product-color-text);
+}
+
+.actual-price {
+  margin-left: 20px;
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+/* Pre & Next button */
+.pre-btn,
+.nxt-btn {
+  padding: 30px;
+  border: none;
+  width: 3vw;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  cursor: pointer;
+  z-index: 8;
+}
+
+.pre-btn {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.nxt-btn {
+  right: 0;
+}
+
+.pre-btn img,
+.nxt-btn img {
+  opacity: 0.2;
+}
+
+.pre-btn:hover img,
+.nxt-btn:hover img {
+  transition: 0.5s;
+  opacity: 1;
 }
