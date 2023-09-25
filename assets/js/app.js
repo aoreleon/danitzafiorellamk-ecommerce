@@ -20,3 +20,13 @@ productContainers.forEach((item, i) => {
         });
     });
 });
+
+//Funcion up-arrow
+const up = document.querySelector("#up");
+up.addEventListener("click", ()=>{
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+    })
+});
